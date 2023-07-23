@@ -1,0 +1,50 @@
+extends layout
+ 
+block content
+  ul#nav
+    li
+      a(href="/") Employee
+    li
+      a(href="/asset-master") Asset Master  
+    li
+      a(href="/category-master") category master    
+    li
+      a(href="/asset-issue") Asset Issue   
+    li
+      a(href="/asset-return") Asset Return
+    li
+      a(href="/asset-scrap") Scrap Status  
+    li
+      a(href="/asset-history") Scrap History      
+  br
+  h2 #{title}
+  h5 #{name}  
+  p
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    div.
+    ul 
+     
+    form(method="POST" action="") 
+      label Name
+      input.form-control(type="text" name="name") 
+      label Empid
+      input.form-control(type="text" name="empid") 
+      label Barnch
+      input.form-control(type="text" name="branch") 
+      label Issues<br />
+      select.custom-select(name="issue") 
+        option(value="") Select 
+        option(value="Issue in Motherboard") Issue in Motherboard
+        option(value="Issue in Keyboard") Issue in Keyboard
+        option(value="Issue in Mousepad") Issue in Mousepad
+        option(value="Issue in Hard Drive") Issue in Hard Drive
+      button Submit
+    
+    
+        
+        

@@ -1,0 +1,56 @@
+extends layout
+ 
+block content
+  ul#nav
+    li
+      a(href="/") Employee
+    li
+      a(href="/asset-master") Asset Master  
+    li
+      a(href="/category-master") category master    
+    li
+      a(href="/asset-issue") Asset Issue   
+    li
+      a(href="/asset-return") Asset Return
+    li
+      a(href="/asset-scrap") Scrap Status  
+    li
+      a(href="/asset-history") Scrap History             
+  br
+  h2 #{title}
+  h5 #{name}    
+  p
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    div.
+     
+    table(class="table table-bodered")
+      thead 
+         tr
+          th Id
+          th Serial Number
+          th Company
+          th Asset Type 
+          th Warrenty Number 
+          th Purchase Date 
+          th Warethy Expire 
+          th Scrap Status
+      tbody 
+       - for(let i=0; i<employee.length; i++)
+        tr 
+        td=employee[i].id
+        td=employee[i].serialno
+        td=employee[i].company 
+        td=employee[i].assettype
+        td=employee[i].warrentyno
+        td=employee[i].purchasedate
+        td=employee[i].warrentexp
+        td=employee[i].scrapstatus
+
+        //- p #{location}
+        
+        

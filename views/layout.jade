@@ -1,0 +1,57 @@
+doctype html5
+html
+  head
+    title #{title}
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+    style(type='text/css').  
+        form{
+          margin:30px 0 50px 0;
+          padding:0;
+        } 
+        label{
+          width:100%;
+        }
+        input{
+          margin-bottom:20px;
+        }
+        select{
+          width:100%; 
+          height:34px;
+           margin-bottom:20px;
+        }
+        ul{
+          margin-top:30px;
+        }
+        ul li{
+          display:inline-block;
+          list-style-type:none;
+          margin-right:15px;
+        }
+        .active{
+          color:red;
+        }
+        select{
+          width:200px;
+          float:right;
+        }
+  body
+    div.container(style="max-width: 800px;")
+      //- h1 Nodejs Jade Sample Application
+      block content
+      //- block footer
+      footer(style="text-align:center;")
+        h5(style="text-align:left;")
+         strong Branch :  
+         span Marthahalli
+              
+        table(class="table table-bodered")
+          thead 
+            tr 
+            th laptop
+            th mouse
+            th keyboard
+          tbody 
+            td=40  
+            td=50  
+            td=20  
+        p Copyright © XYZ 

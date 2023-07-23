@@ -1,0 +1,62 @@
+extends layout
+ 
+block content
+  ul#nav    
+    li
+      a(href="/") Employee
+    li
+      a(href="/asset-master") Asset Master  
+    li
+      a(href="/category-master") category master    
+    li
+      a(href="/asset-issue") Asset Issue   
+    li
+      a(href="/asset-return") Asset Return
+    li
+      a(href="/asset-scrap") Scrap Status  
+    li
+      a(href="/asset-history") Scrap History          
+  br
+  h2 #{title}
+  h5 #{name}  
+  p
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    div.
+    
+    select(onchange='getData()')    
+      option(value='') select
+      option(value='active') active
+      option(value='inactive') inactive
+    table(class="table table-bodered")
+      thead 
+         tr
+          th Id
+          th Name
+          th Gender
+          th Designation
+          th Employee Id
+          th Branch
+          th Location
+          th Mobile
+          th Status
+      tbody 
+       - for(let i=0; i<employee.length; i++)
+        tr 
+        td=employee[i].id
+        td=employee[i].name
+        td=employee[i].gender
+        td=employee[i].designation
+        td=employee[i].empid
+        td=employee[i].branch
+        td=employee[i].location
+        td=employee[i].mobile
+        td=employee[i].status
+
+        //- p #{location}
+        
+        
